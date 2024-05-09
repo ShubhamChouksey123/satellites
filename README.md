@@ -1,5 +1,5 @@
 
-# Quiz Website
+# Satellite-DB
 
 ## Overview
 
@@ -53,10 +53,9 @@ docker images
 docker run -p 8080:8080
 ```
 
+ 
 
-## Java Server 
-
-### JinJava Project Start
+### Project Build and Run Commands
 
 
 * Make sure the command in start.sh script is correct as per your config files path
