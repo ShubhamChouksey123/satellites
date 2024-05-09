@@ -4,7 +4,7 @@
 ## Overview
 
 
-Welcome to my quiz website repository! This digital platform serves as a showcase of my journey as a software engineer, spotlighting my skills, projects, and experiences. Built with HTML, CSS, and JavaScript for the frontend, and Java with Spring Boot for the backend, it offers visitors profound insights into my expertise and creative endeavors. Leveraging PostgreSQL for database management and Gmail SMTP protocol for seamless communication, it stands as a testament to my commitment to delivering robust and dynamic web solutions.
+Welcome to my satellite! This digital platform serves as a showcase of my journey as a software engineer, spotlighting my skills, projects, and experiences. Built with HTML, CSS, and JavaScript for the frontend, and Java with Spring Boot for the backend, it offers visitors profound insights into my expertise and creative endeavors. Leveraging PostgreSQL for database management and Gmail SMTP protocol for seamless communication, it stands as a testament to my commitment to delivering robust and dynamic web solutions.
 
 - The master build is live at: [Quiz-Website](https://quiz-website-g8d7.onrender.com/)
 - To ensure continuous uptime, a monitoring system is in place: [Uptime-Robot-URL](https://uptimerobot.com/dashboard)
@@ -15,10 +15,10 @@ Welcome to my quiz website repository! This digital platform serves as a showcas
 
 ## Features
 
-- Engage users with a collection of random multiple-choice questions sourced from a database.
-- Assess user performance by evaluating quiz submissions and comparing scores with other participants.
-- Classify scores as above average or otherwise, providing valuable feedback to users.
-- Maintain an updated leader board showcasing top performers in the quiz.
+- CRUD operations for satellite and launcher dataset.
+- Search bar to filter result based on input.
+- pagination to control the flow of the response.
+
 
 ## Getting Started
 
