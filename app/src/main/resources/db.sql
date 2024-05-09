@@ -72,4 +72,4 @@ INSERT INTO customer_satellites (id, country, launch_date, mass, launcher) VALUE
 INSERT INTO customer_satellites (id, country, launch_date, mass, launcher) VALUES ('VELOX-C1', 'SINGAPORE', '16-12-2015', '123', 'PSLV-C29');
 INSERT INTO customer_satellites (id, country, launch_date, mass, launcher) VALUES ('VELOX-II', 'SINGAPORE', '16-12-2015', '13', 'PSLV-C29');
 INSERT INTO customer_satellites (id, country, launch_date, mass, launcher) VALUES ('Galassia', 'SINGAPORE', '16-12-2015', '3.4', 'PSLV-C29');
-INSERT INTO customer_satellites (id, country, launch_date, mass, launcher) VALUES ('Athenoxat-I', 'SINGAPORE', '16-12-2015', '', 'PSLV-C29');
+INSERT INTO customer_satellites (id, country, launch_date, mass, launcher) VALUES ('Athenoxat-I', 'SINGAPORE', '16-12-2015', '21', 'PSLV-C29');
