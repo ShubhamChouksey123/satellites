@@ -4,11 +4,13 @@
 ## Overview
 
 
-Welcome to my satellite! This digital platform serves as a showcase of my journey as a software engineer, spotlighting my skills, projects, and experiences. Built with HTML, CSS, and JavaScript for the frontend, and Java with Spring Boot for the backend, it offers visitors profound insights into my expertise and creative endeavors. Leveraging PostgreSQL for database management and Gmail SMTP protocol for seamless communication, it stands as a testament to my commitment to delivering robust and dynamic web solutions.
+Welcome to my satellite! This digital platform serves as a showcase of my journey as a software engineer, spotlighting my skills, projects, and experiences. 
+- Built with HTML, CSS, and JavaScript for the frontend 
+- Java with Spring Boot, Hibernate, JPA  for the backend it offers visitors profound insights into my expertise and creative endeavors. 
+- Leveraging PostgreSQL for database management, it stands as a testament to my commitment to delivering robust and dynamic web solutions.
 
-- The master build is live at: [Quiz-Website](https://quiz-website-g8d7.onrender.com/)
+- The master build is live at: [Satellite-DB](https://satellites.onrender.com/)
 - To ensure continuous uptime, a monitoring system is in place: [Uptime-Robot-URL](https://uptimerobot.com/dashboard)
-- Scheduled tasks are configured to access the website every 10 minutes: [Cron-Job-URL](https://console.cron-job.org/jobs)
 
 
 
@@ -17,12 +19,12 @@ Welcome to my satellite! This digital platform serves as a showcase of my journe
 
 - CRUD operations for satellite and launcher dataset.
 - Search bar to filter result based on input.
-- pagination to control the flow of the response.
+- Pagination to control the flow of the response.
 
 
 ## Getting Started
 
-Embark on your quiz journey by visiting the [Quiz Website](https://quiz-website-g8d7.onrender.com/). Navigate through user-friendly interfaces offering options to start new quizzes, access leader boards, view results, and connect through the contact page.
+Visit the [Satellite-DB](https://quiz-website-g8d7.onrender.com/). Navigate through user-friendly interfaces offering adding and updating new satellite information.
 
 
 
@@ -65,13 +67,13 @@ env $(cat app/.env | grep -v "^#" | xargs) java -jar app/target/app-0.0.1-SNAPSH
 
 ## Sample .env File
 ```shell script
-# Quiz Website Database credentials
-QUIZ_DB_HOST=localhost
-QUIZ_DB_PORT=5432
-QUIZ_DB_NAME=quiz
-QUIZ_DB_USERNAME=postgres
-QUIZ_DB_PASSWORD=root
-QUIZ_DB_CONFIG_QUERY_STRING=allowPublicKeyRetrieval=true&useSSL=false&sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false&createDatabaseIfNotExist=true
+# Satellite Database credentials
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=satellite-data
+DB_USERNAME=postgres
+DB_PASSWORD=root
+DB_CONFIG_QUERY_STRING=allowPublicKeyRetrieval=true&useSSL=false&sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false&createDatabaseIfNotExist=true
 ```
 
 ## License
