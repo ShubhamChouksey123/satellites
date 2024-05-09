@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
+import com.shubham.app.exception.InvalidParameters;
 import com.shubham.app.render.RenderSatelliteTemplate;
 import com.shubham.app.service.SatelliteService;
 
@@ -37,7 +38,7 @@ public class SatelliteController {
      *            : the pagination page size
      * @return
      */
-    @GetMapping(value = {"/web/satellites"})
+    @GetMapping(value = {"/web/satellites", "", "/"})
     public String getLaunchers(Model model, @RequestParam(value = "searchText", required = false) String searchText,
             @RequestParam(value = "pageNumber", required = false) BigInteger pageNumber,
             @RequestParam(value = "pageSize", required = false) BigInteger pageSize) {
@@ -89,6 +90,9 @@ public class SatelliteController {
             // creating a new-satellite
             satelliteService.createOrUpdateSatellites(satelliteIdExisting, satelliteId, country, launchDate, mass,
                     launcherId, redirectAttrs);
+        } catch (InvalidParameters e) {
+            logger.error("error while creating a launcher : {}", e.getMessage());
+            redirectAttrs.addFlashAttribute("errorMessage", "Invalid parameters : " + e.getMessage());
         } catch (Exception e) {
             logger.error("error while creating a launcher : {}", e.getMessage());
             redirectAttrs.addFlashAttribute("errorMessage", "Unable to create launcher : " + e.getMessage());

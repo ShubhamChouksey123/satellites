@@ -8,6 +8,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.shubham.app.dto.SatelliteDto;
 import com.shubham.app.entity.CustomerSatellite;
+import com.shubham.app.exception.InvalidParameters;
 import com.shubham.app.hibernate.dao.SatelliteInfoDao;
 
 import java.math.BigInteger;
@@ -67,9 +68,39 @@ public class SatelliteServiceImpl implements SatelliteService {
         return getCountDtoListFromEntity(satellites);
     }
 
+    private void validateParameters(String satelliteIdExisting, String id, String country, String launchDate,
+            Double mass, String launcherId) throws InvalidParameters {
+
+        if (satelliteIdExisting == null && id == null) {
+            throw new InvalidParameters("satellite Id can't be null");
+        }
+
+        if (Objects.equals(id, ZERO_LENGTH_STRING) && Objects.equals(satelliteIdExisting, ZERO_LENGTH_STRING)) {
+            throw new InvalidParameters("satellite Id can't be null");
+        }
+
+        if (country == null || Objects.equals(country, ZERO_LENGTH_STRING)) {
+            throw new InvalidParameters("country can't be null");
+        }
+
+        if (launchDate == null) {
+            throw new InvalidParameters("launchDate can't be null");
+        }
+
+        if (mass == null) {
+            throw new InvalidParameters("mass can't be null");
+        }
+
+        if (launcherId == null) {
+            throw new InvalidParameters("launcherId can't be null");
+        }
+    }
+
     @Override
     public void createOrUpdateSatellites(String satelliteIdExisting, String id, String country, String launchDate,
-            Double mass, String launcherId, RedirectAttributes redirectAttrs) throws ParseException {
+            Double mass, String launcherId, RedirectAttributes redirectAttrs) throws ParseException, InvalidParameters {
+
+        validateParameters(satelliteIdExisting, id, country, launchDate, mass, launcherId);
 
         /** updating existing launcher */
         if (satelliteIdExisting == null || Objects.equals(satelliteIdExisting, ZERO_LENGTH_STRING)) {

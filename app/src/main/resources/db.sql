@@ -73,3 +73,8 @@ INSERT INTO customer_satellites (id, country, launch_date, mass, launcher) VALUE
 INSERT INTO customer_satellites (id, country, launch_date, mass, launcher) VALUES ('VELOX-II', 'SINGAPORE', '16-12-2015', '13', 'PSLV-C29');
 INSERT INTO customer_satellites (id, country, launch_date, mass, launcher) VALUES ('Galassia', 'SINGAPORE', '16-12-2015', '3.4', 'PSLV-C29');
 INSERT INTO customer_satellites (id, country, launch_date, mass, launcher) VALUES ('Athenoxat-I', 'SINGAPORE', '16-12-2015', '21', 'PSLV-C29');
+
+
+UPDATE public.customer_satellites
+	SET created_at = '2024-05-09 22:50:35.258'
+	WHERE created_at IS NULL;
